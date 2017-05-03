@@ -1,0 +1,99 @@
+.container 
+	max-width: 1170px
+	margin: 0 auto
+	position: relative
+	+clr
+
+	+r(1200)
+		padding: 0 20px
+
+.secondary-title
+	max-width: 440px
+	margin: 0 auto 0
+	margin-bottom: 35px
+	line-height: 42px
+	text-align: center
+	text-transform: uppercase
+	font-family: 'Montserrat', sans-serif 
+	font-size: 32px
+	font-weight: 900
+	letter-spacing: -1px
+	+css-lock(22, 32, 320, 1920)
+	+css-lock(26, 42, 320, 1920, line-height)
+
+.secondary-title--white
+	max-width: 100%
+	text-align: left
+	font-weight: 800
+	color: #fff
+
+.section-descr
+	max-width: 400px
+	margin: 0 auto
+	text-align: center
+	font-size: 16px
+	font-weight: 500
+	line-height: 28px
+
+.icon 
+	background: url("../img/sprite.png") no-repeat
+	+vcenter
+	
+.item
+	text-align: center
+	&__pic 
+		position: relative
+		width: 60px
+		height: 50px
+		margin: 0 auto 20px
+
+	&__title
+		margin-bottom: 10px
+		font-family: 'Montserrat', sans-serif 
+		font-size: 18px
+		font-weight: 400
+
+	&__summary 
+		color: #585858
+		font-size: 14px
+		line-height: 24px
+
+.item--border 
+	position: relative
+	&:after
+		width: 1px
+		height: 100%
+		right: -4%
+		top: 0
+		position: absolute
+		content: ""
+		background: #eee
+	&:last-child
+		&:after
+			display: none
+	+r(1024)
+		&:after
+			display: none
+
+.btn-green
+	display: inline-block
+	padding: 16px 35px
+	background-color: #00be9d
+	border-radius: 23px
+	box-shadow: 0 6px 22px rgba(0, 132, 109, 0.35)
+	text-decoration: none
+	text-transform: uppercase
+	color: #fff
+	font-size: 13px
+	transition: 0.3s ease-in-out
+	&:hover
+		background-color: darken(#00be9d, 5%)
+
+.btn-green--large
+	padding: 23px 28px
+	font-size: 15px
+	border-radius: 32px
+	+r(1200)
+		font-size: 13px
+		padding: 18px 20px
+

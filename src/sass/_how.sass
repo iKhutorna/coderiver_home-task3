@@ -1,0 +1,39 @@
+.how 
+	padding-top: 68px
+	padding-bottom: 80px
+	+css-lock(50, 68, 320, 1920, padding-top)
+	+css-lock(50, 80, 320, 1920, padding-bottom)
+
+.how-items
+	margin-top: 28px
+	display: grid;
+	grid-gap: 2%;
+	grid-template-columns: 1fr 1fr 1fr 1fr
+
+	+r(1024)
+		grid-gap: 25px
+		grid-template-columns: 1fr 1fr
+	+r(540)
+		grid-gap: 35px
+		grid-template-columns: 1fr 
+
+.icon-account
+	width: 56px
+	height: 42px
+	background-position: 0 0
+
+.icon-location
+	width: 44px
+	height: 47px
+	background-position: -66px 0
+
+.icon-check-mark
+	width: 40px
+	height: 40px
+	background-position: -46px -106px
+
+.icon-places
+	width: 49px
+	height: 44px
+	background-position: 0 -52px
+

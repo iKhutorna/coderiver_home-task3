@@ -1,0 +1,28 @@
+
+<!-- begin how  -->
+<div class="how">
+	<div class="container">
+		<h2 class="secondary-title">
+			How it Works
+		</h2>
+		<div class="section-descr">
+			Our marketplace connects advertisers and sellers of ad space directly.
+		</div>
+		<div class="how-items">
+			{% for item in itemsHow %}
+			<!-- begin item  -->
+			<div class="item item--border">
+				<div class="item__pic">
+					<div class="icon {{item.icon}}"></div>
+				</div>
+				<h3 class="item__title">{{item.title}}</h3>
+				<div class="item__summary">
+					{{item.summary}}
+				</div>
+			</div>
+			<!-- end item  -->
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end how  -->

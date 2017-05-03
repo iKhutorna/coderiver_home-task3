@@ -1,0 +1,88 @@
+.footer
+	padding-top: 35px
+	border-top: 1px solid #f3f3f3
+	+css-lock(20, 35, 320, 1920, padding-top) 
+
+	&__content
+		padding-bottom: 35px
+		border-bottom: 1px solid #f3f3f3
+		+clr 
+
+	&__title
+		font-size: 15px
+		font-weight: 700
+		line-height: 44px
+		text-transform: uppercase
+		font-family: 'Montserrat', sans-serif
+
+	&__descr
+		width: 45%
+		float: left
+		padding-right: 60px
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		
+		p 
+			color: #737171
+
+		+r(860)
+			padding-right: 0
+			margin-bottom: 20px
+			width: 100%
+			float: none
+
+	&__lists
+		width: 55%
+		float: right
+		display: grid
+		grid-gap: 30px
+		grid-template-columns: 1fr 1fr 1fr
+		+r(860)
+			width: 100%;
+			float: none
+		+r(540)
+			grid-gap: 10px
+			grid-template-columns: 1fr 1fr
+
+	&__list
+		a 
+			text-decoration: none
+			color: #737171
+			line-height: 24px
+			font-size: 14px
+			font-weight: 400
+			&:hover
+				color: #000
+
+	&__social
+		li 
+			margin-right: 5px
+			display: inline-block
+			position: relative
+			width: 30px
+			height: 30px
+
+	&__copyright 
+		padding: 25px 0
+		text-align: center
+		color: #999;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+
+.icon-fb 
+	width: 30px
+	height: 30px
+	background-position: -172px 0
+
+.icon-tw 
+	width: 30px
+	height: 30px
+	background-position: -66px -57px
+
+.icon-inst 
+	width: 30px
+	height: 30px
+	background-position: -96px -106px
+

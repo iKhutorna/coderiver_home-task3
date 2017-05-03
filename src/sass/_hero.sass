@@ -1,0 +1,111 @@
+.hero
+	position: relative
+
+	&__slide
+		position: relative
+		padding-top: 280px
+		padding-bottom: 200px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		+css-lock(170, 280, 320, 1920, padding-top)
+		+css-lock(150, 200, 320, 1920, padding-bottom)
+		
+	&__title
+		line-height: 1.18 
+		max-width: 480px
+		text-transform: uppercase
+		color: #fff 
+		font-weight: 900
+		font-family: 'Montserrat', sans-serif 
+		+css-lock(24, 52, 320, 1920)
+
+	&__descr
+		margin-top: 50px
+		margin-bottom: 60px
+		font-size: 22px
+		color: #fff
+		+css-lock(30, 50, 320, 1920, margin-top)
+		+css-lock(40, 60, 320, 1920, margin-bottom)
+		+r(540)
+			font-size: 20px
+
+	&__btn 
+		padding: 20px 24px
+		display: inline-block
+		border-radius: 30px
+		text-decoration: none
+		text-transform: uppercase
+		color: #fff
+		font-size: 16px
+		transition: 0.3s ease-in-out
+		+gh(#0085f4, #00be9d)
+		+css-lock(14, 16, 320, 1920)
+		&:hover
+			+gh(#00be9d, #0085f4)
+
+	&__scroll
+		position: absolute
+		bottom: -33px
+		left: calc(50% - 32px)
+		width: 65px
+		height: 65px
+		border-radius: 50%
+		background: #fff
+		box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15)
+		transition: 0.3s ease-in-out
+		&:hover 
+			bottom: -38px
+
+		.icon-scroll
+			width: 16px
+			height: 34px
+			background-position: -172px -88px
+
+	&__nav
+		position: absolute
+		bottom: 70px
+		right: 0
+		+r(1024)
+			right: 20px
+
+	&__next,
+	&__prev 
+		margin-left: 10px
+		width: 58px
+		height: 58px
+		position: relative
+		display: inline-block
+		border-radius: 50%
+		border: 2px solid #fff
+		z-index: 2
+		cursor: pointer
+		background: transparent
+		+css-lock(40, 58, 320, 1920, width)
+		+css-lock(40, 58, 320, 1920, height)
+
+	&__next 
+		&:hover
+			.icon-next
+				left: calc(50% + 3px)
+
+	&__prev 
+		&:hover
+			.icon-prev
+				left: calc(50% - 3px)
+
+.icon-next
+	width: 10px
+	height: 16px
+	background-position: -134px -107px
+	transition: 0.3s ease-in-out
+
+.icon-prev
+	width: 10px
+	height: 16px
+	background-position: -154px -107px
+	transition: 0.3s ease-in-out
+
+.slick-next,
+.slick-prev
+	display: none !important
+

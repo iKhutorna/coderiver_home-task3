@@ -1,0 +1,103 @@
+.advantage
+	&__item
+		display: grid
+		grid-template-columns: 1fr 1fr
+		+r(1420)
+			grid-template-columns: 1fr
+			grid-template-rows: 1fr 600px
+		+r(860)
+			grid-template-rows: 1fr 400px
+		+r(540)
+			grid-template-rows: 1fr 250px 
+
+	&__content
+		padding-top: 82px
+		padding-bottom: 82px 
+		padding-right: 82px 
+		padding-left: 82px 
+		+css-lock(20, 82, 320, 1920, padding-right)
+		+css-lock(20, 82, 320, 1920, padding-left)
+		+css-lock(55, 82, 320, 1920, padding-top)
+		+css-lock(35, 82, 320, 1920, padding-bottom)
+
+		+r(1420)
+			&:nth-child(2)
+				grid-row-start: 1
+				grid-row-end: span 2
+
+			
+
+		&:first-child
+			margin-top: 25px
+			+gh(#0085f4, #00be9d)
+
+		&:last-child
+			margin-bottom: 25px
+			+gh(#00be9d, #0085f4)
+
+	&__descr
+		color: #fff
+		line-height: 28px
+		font-size: 16px
+		font-weight: 400
+		+r(540) 
+			font-size: 14px
+			line-height: 24px
+
+	&__list
+		margin-top: 45px
+		+css-lock(20, 45, 320, 1920, margin-top)
+
+		li 	
+			margin-bottom: 20px
+			position: relative
+			padding-left: 45px
+			color: white
+			font-size: 16px;
+			font-weight: 400
+			line-height: 28px
+			+r(540) 
+				font-size: 14px
+				line-height: 24px
+
+			&:before
+				left: 0
+				top: -7px
+				position: absolute
+				content: ""
+				width: 36px
+				height: 36px
+				border-radius: 50%
+				background: #fff
+				+r(540) 
+					width: 30px
+					height: 30px
+
+			&:after
+				left: 10px
+				top: 3px
+				position: absolute
+				content: ""
+				width: 20px
+				height: 15px
+				background-image: url("../img/sprite.png") 
+				background-repeat: no-repeat
+				background-position: -173px -130px
+				+r(540) 
+					left: 8px
+					top: 0px
+
+	&__pic
+		+cover
+		+r(1420)
+			&:nth-child(1)
+				display: none
+		
+
+
+			
+
+	    
+
+
+

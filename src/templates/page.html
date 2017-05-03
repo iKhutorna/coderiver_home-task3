@@ -1,0 +1,52 @@
+---
+title: Index page
+slides:
+ - img: ../img/bg-1.jpg
+   title: Crowdsourced ad Space
+   descr: A peer-to-peer advertising platform
+   btn: Start Selling, now
+ - img: ../img/bg-1.jpg
+   title: Crowdsourced ad Space
+   descr: A peer-to-peer advertising platform
+   btn: Start Selling, now
+
+itemsWhy:
+- icon: icon-mouse
+  title: Easy to Use
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+- icon: icon-clock
+  title: Save Your Time
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+- icon: icon-diagram
+  title: Effective
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+
+itemsHow:
+- icon: icon-account
+  title: Create an Account
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+- icon: icon-location
+  title: Search For Ad Space
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+- icon: icon-check-mark
+  title: Apply For Ad Space
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+- icon: icon-places
+  title: Your Ad Is Placed
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+---
+{% extends "layouts/_layout.html" %}
+
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+    {% include "partials/_hero.html" %}
+    {% include "partials/_why.html" %}
+    {% include "partials/_make.html" %}
+    {% include "partials/_advantage.html" %}
+    {% include "partials/_how.html" %}
+    {% include "partials/_banner.html" %}
+	{% include "partials/_footer.html" %} 
+	
+{% endblock %}

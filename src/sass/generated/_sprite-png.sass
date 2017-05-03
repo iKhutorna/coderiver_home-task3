@@ -1,0 +1,142 @@
+$icons: (0:0)
+$icons: map-merge($icons,('account': (X: 0px, Y:0px, W: 56px, H: 42px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-next': (X: -136px, Y:-106px, W: 8px, H: 17px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-prev': (X: -154px, Y:-106px, W: 8px, H: 17px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('check-mark': (X: -46px, Y:-106px, W: 40px, H: 40px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('check': (X: -172px, Y:-132px, W: 18px, H: 13px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('clock': (X: -120px, Y:0px, W: 42px, H: 42px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('diagram': (X: -120px, Y:-52px, W: 42px, H: 42px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -172px, Y:0px, W: 30px, H: 30px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook@2x': (X: -172px, Y:-40px, W: 20px, H: 38px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('instagram': (X: -96px, Y:-106px, W: 30px, H: 30px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('location': (X: -66px, Y:0px, W: 44px, H: 47px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('mouse': (X: 0px, Y:-106px, W: 36px, H: 45px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('placed': (X: 0px, Y:-52px, W: 49px, H: 44px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('scroll-down': (X: -172px, Y:-88px, W: 16px, H: 34px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter': (X: -66px, Y:-57px, W: 30px, H: 30px, TW: 202px, TH: 151px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-account
+//  width: 56px
+//  height: 42px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-arrow-next
+//  width: 8px
+//  height: 17px
+//  background-image: url('../img/sprite.png')
+//  background-position: -136px -106px
+//
+//.icon-arrow-prev
+//  width: 8px
+//  height: 17px
+//  background-image: url('../img/sprite.png')
+//  background-position: -154px -106px
+//
+//.icon-check-mark
+//  width: 40px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -46px -106px
+//
+//.icon-check
+//  width: 18px
+//  height: 13px
+//  background-image: url('../img/sprite.png')
+//  background-position: -172px -132px
+//
+//.icon-clock
+//  width: 42px
+//  height: 42px
+//  background-image: url('../img/sprite.png')
+//  background-position: -120px 0px
+//
+//.icon-diagram
+//  width: 42px
+//  height: 42px
+//  background-image: url('../img/sprite.png')
+//  background-position: -120px -52px
+//
+//.icon-facebook
+//  width: 30px
+//  height: 30px
+//  background-image: url('../img/sprite.png')
+//  background-position: -172px 0px
+//
+//.icon-facebook@2x
+//  width: 20px
+//  height: 38px
+//  background-image: url('../img/sprite.png')
+//  background-position: -172px -40px
+//
+//.icon-instagram
+//  width: 30px
+//  height: 30px
+//  background-image: url('../img/sprite.png')
+//  background-position: -96px -106px
+//
+//.icon-location
+//  width: 44px
+//  height: 47px
+//  background-image: url('../img/sprite.png')
+//  background-position: -66px 0px
+//
+//.icon-mouse
+//  width: 36px
+//  height: 45px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -106px
+//
+//.icon-placed
+//  width: 49px
+//  height: 44px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -52px
+//
+//.icon-scroll-down
+//  width: 16px
+//  height: 34px
+//  background-image: url('../img/sprite.png')
+//  background-position: -172px -88px
+//
+//.icon-twitter
+//  width: 30px
+//  height: 30px
+//  background-image: url('../img/sprite.png')
+//  background-position: -66px -57px
+//

@@ -1,0 +1,31 @@
+
+<!-- begin hero  -->
+<div class="hero">
+    <div class="hero__slider">
+    	<!-- begin hero__slide  -->
+		{% for slide in slides %}
+		<div class="hero__slide" style="background-image:url({{slide.img}})">
+			<div class="container">
+				<div class="hero__title">{{slide.title}}</div>
+				<div class="hero__descr">{{slide.descr}}</div>
+				<a class="hero__btn" href="#">{{slide.btn}}</a>
+			</div>
+		</div>
+		{% endfor %}
+		<!-- end hero__slide -->
+	</div>
+	<div class="container">
+		<div class="hero__nav">
+			<div class="hero__prev js-hero-prev">
+				<div class="icon icon-prev"></div>
+			</div>
+			<div class="hero__next js-hero-next">
+				<div class="icon icon-next"></div>
+			</div>
+		</div>
+	</div>
+	<a class="hero__scroll" href="#why">
+		<div class="icon icon-scroll"></div>
+	</a>
+</div>
+<!-- end hero  -->
